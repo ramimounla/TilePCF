@@ -1,0 +1,19 @@
+.divstyle {
+    height: 110px;
+    width: 100px;
+    font-family: 'Open Sans', "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.spanstyle {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+
+.descriptionstyle {
+    display: block;
+    line-height: 1.6;
+}
