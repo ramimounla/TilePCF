@@ -3,8 +3,9 @@
     width: 100px;
     font-family: 'Open Sans', "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     color: white;
-    text-align: center;
-    overflow: hidden;
+    text-align: center; 
+    overflow: hidden;   
+    float: left;
 }
 
 .spanstyle {
