@@ -40,7 +40,7 @@ export class Tile implements ComponentFramework.StandardControl<IInputs, IOutput
         localDiv.appendChild(this._spanValue);
 
 
-        this._spanValue.innerText = context.parameters.text.raw + "";
+        this._spanValue.innerText = context.parameters.input.raw + "";
         this._spanDescription.innerText = context.parameters.title.raw + "";
 
         container.appendChild(localDiv);
@@ -54,7 +54,7 @@ export class Tile implements ComponentFramework.StandardControl<IInputs, IOutput
 	public updateView(context: ComponentFramework.Context<IInputs>): void
 	{
 		// Add code to update control view
-        this._spanValue.innerText = context.parameters.text.raw + "";
+        this._spanValue.innerText = context.parameters.input.raw + "";
 	}
 
 	/** 

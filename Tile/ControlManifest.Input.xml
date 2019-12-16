@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
   <control namespace="XrmEnterprise" constructor="Tile" version="0.0.1" display-name-key="Tile" description-key="Tile description" control-type="standard">
+    <type-group name="TextNumber">
+      <type>Whole.None</type>
+      <type>SingleLine.Text</type>
+    </type-group>
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
-    <property name="text" display-name-key="Text" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" default-value="15" />
+    <property name="input" display-name-key="Input Value" description-key="Input value to be displayed on the tile." of-type-group="TextNumber" usage="bound" required="true" default-value="15" />
     <property name="title" display-name-key="Title" description-key="Component Title" of-type="SingleLine.Text" usage="input" required="true" default-value="Title"/>
-    <property name="colour" display-name-key="BackgroundColour" description-key="Component Background Colour" of-type="SingleLine.Text" usage="input" required="true"  default-value="#2672EC"/>
+    <property name="colour" display-name-key="BackgroundColour" description-key="Component Background Colour" of-type="SingleLine.Text" usage="input" required="true" default-value="#2672EC"/>
     <!-- 
       Property node's of-type attribute can be of-type-group attribute. 
       Example:
