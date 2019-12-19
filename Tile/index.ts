@@ -1,7 +1,5 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 
-// ///<reference path="./js/tabNavigation.js"/>
-
 export class Tile implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
 	private _context: ComponentFramework.Context<IInputs>;
@@ -49,7 +47,8 @@ export class Tile implements ComponentFramework.StandardControl<IInputs, IOutput
 		if (((context.parameters.tabName.raw + "").trim().length > 0)) {
 			this._tabName = context.parameters.tabName.raw || "";
 			localDiv.style.cursor = "pointer";
-			localDiv.addEventListener("click", (e: MouseEvent) => navigateToTab(this._tabName));
+			// localDiv.addEventListener("click", (e: MouseEvent) => navigateToTab(this._tabName));
+			localDiv.onclick=((e: MouseEvent) => navigateToTab(this._tabName));
 		}
 
 
