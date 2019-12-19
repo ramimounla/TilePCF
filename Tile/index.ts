@@ -48,11 +48,16 @@ export class Tile implements ComponentFramework.StandardControl<IInputs, IOutput
 			this._tabName = context.parameters.tabName.raw || "";
 			localDiv.style.cursor = "pointer";
 			// localDiv.addEventListener("click", (e: MouseEvent) => navigateToTab(this._tabName));
-			localDiv.onclick=((e: MouseEvent) => navigateToTab(this._tabName));
+			localDiv.onclick=((e: MouseEvent) => this.navigateToTab(this._tabName));
 		}
 
 
 		container.appendChild(localDiv);
+	}
+
+	private navigateToTab(tabName:string):void{
+		eval("alert(tabName)");
+		eval("Xrm.Page.ui.tabs.get(tabName).setFocus()");
 	}
 
 	/**
