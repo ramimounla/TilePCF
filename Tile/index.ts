@@ -25,9 +25,6 @@ export class Tile implements ComponentFramework.StandardControl<IInputs, IOutput
 	 */
 	public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container: HTMLDivElement) {
 		// Add control initialization code
-
-
-
 		var localDiv: HTMLDivElement;
 		localDiv = document.createElement("div");
 		localDiv.className = "divstyle divother";
@@ -47,7 +44,6 @@ export class Tile implements ComponentFramework.StandardControl<IInputs, IOutput
 		if (((context.parameters.tabName.raw + "").trim().length > 0)) {
 			this._tabName = context.parameters.tabName.raw || "";
 			localDiv.style.cursor = "pointer";
-			// localDiv.addEventListener("click", (e: MouseEvent) => navigateToTab(this._tabName));
 			localDiv.onclick=((e: MouseEvent) => this.navigateToTab(this._tabName));
 		}
 
@@ -56,7 +52,6 @@ export class Tile implements ComponentFramework.StandardControl<IInputs, IOutput
 	}
 
 	private navigateToTab(tabName:string):void{
-		eval("alert(tabName)");
 		eval("Xrm.Page.ui.tabs.get(tabName).setFocus()");
 	}
 

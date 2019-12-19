@@ -7,7 +7,7 @@
     </type-group>
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
     <property name="input" display-name-key="Input Value" description-key="Input value to be displayed on the tile." of-type-group="TextNumber" usage="bound" required="true" default-value="15" />
-    <property name="title" display-name-key="Title" description-key="Component Title" of-type="SingleLine.Text" usage="input" required="true" default-value="Title"/>
+    <property name="title" display-name-key="TitleV2" description-key="Component Title" of-type="SingleLine.Text" usage="input" required="true" default-value="Title"/>
     <property name="colour" display-name-key="BackgroundColour" description-key="Component Background Colour" of-type="SingleLine.Text" usage="input" required="true" default-value="#2672EC"/>
     <property name="tabName" display-name-key="Tab Name" description-key="Name of tab to navigate to" of-type="SingleLine.Text" usage="input" required="false" />
     
