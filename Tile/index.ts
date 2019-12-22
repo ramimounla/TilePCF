@@ -6,7 +6,6 @@ export class Tile implements ComponentFramework.StandardControl<IInputs, IOutput
 
 	private _spanValue: HTMLSpanElement;
 	private _spanDescription: HTMLSpanElement;
-	private _tabName: string;
 
 	/**
 	 * Empty constructor.
@@ -28,7 +27,7 @@ export class Tile implements ComponentFramework.StandardControl<IInputs, IOutput
 		var localDiv: HTMLDivElement;
 		localDiv = document.createElement("div");
 		localDiv.className = "divstyle divother";
-		localDiv.style.backgroundColor = context.parameters.colour.raw + "";
+		localDiv.style.backgroundColor = context.parameters.colour.raw || "";
 
 		this._spanDescription = document.createElement("span");
 		this._spanDescription.className = "descriptionstyle";
@@ -37,21 +36,19 @@ export class Tile implements ComponentFramework.StandardControl<IInputs, IOutput
 		this._spanValue = document.createElement("span");
 		this._spanValue.className = "spanstyle";
 		localDiv.appendChild(this._spanValue);
+		
+		this._spanValue.innerText = context.parameters.input.raw;
+		this._spanDescription.innerText = context.parameters.title.raw || "";
 
-		this._spanValue.innerText = context.parameters.input.raw + "";
-		this._spanDescription.innerText = context.parameters.title.raw + "";
-
-		if (((context.parameters.tabName.raw + "").trim().length > 0)) {
-			this._tabName = context.parameters.tabName.raw || "";
+		if (((context.parameters.tabName.raw || "").trim().length > 0)) {
 			localDiv.style.cursor = "pointer";
-			localDiv.onclick=((e: MouseEvent) => this.navigateToTab(this._tabName));
+			localDiv.onclick = ((e: MouseEvent) => this.navigateToTab(context.parameters.tabName.raw || ""));
 		}
-
 
 		container.appendChild(localDiv);
 	}
 
-	private navigateToTab(tabName:string):void{
+	private navigateToTab(tabName: string): void {
 		eval("Xrm.Page.ui.tabs.get(tabName).setFocus()");
 	}
 
