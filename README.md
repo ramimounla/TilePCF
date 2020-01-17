@@ -1,6 +1,9 @@
 # TilePCF
 Power Apps Tile PCF control. Single tile with title and number/text binding. User has control over it's color and font.
 
+## Release
+Download the latest release from the [release tab](../../releases/latest)
+
 # Screenshot 
 ![Tile with record counts](https://github.com/ramimounla/TilePCF/blob/master/Screenshot/Tile%20PCF.png?raw=true)
 
